@@ -2,4 +2,7 @@
 <resources>
     <dimen name="margin">8dp</dimen>
     <dimen name="margin_2x">16dp</dimen>
+    <dimen name="main_horizontalLine_size">2dp</dimen>
+    <dimen name="main_description_textSize">18sp</dimen>
+    <dimen name="main_header_height">200dp</dimen>
 </resources>

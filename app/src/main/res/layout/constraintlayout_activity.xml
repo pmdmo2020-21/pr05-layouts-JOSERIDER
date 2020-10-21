@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_headerImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_header_height"
+        android:contentDescription="@string/main_headerImg_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_2x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_headerImg"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/main_lbl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_lbl_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/main_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/main_bookmark_description"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintBottom_toBottomOf="@+id/main_lbl_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/main_lbl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin"
+            android:text="@string/main_lbl_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_lbl_title" />
+
+
+        <Button
+            android:id="@+id/main_btn_rent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:text="@string/main_btn_rent"
+            app:layout_constraintEnd_toStartOf="@+id/main_btn_buy"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_lbl_date" />
+
+        <Button
+            android:id="@+id/main_btn_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_btn_buy"
+            app:layout_constraintBottom_toBottomOf="@+id/main_btn_rent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/main_btn_rent" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_horizontalLine_size"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:background="@color/gray_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_btn_rent" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/main_lbl_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin"
+
+            android:text="@string/lbl_ratings"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_family"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/main_lbl_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/lbl_family"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/tomato"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton2"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/main_lbl_tomato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/lbl_tomato"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton3"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton3"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton3" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_similar"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/main_lbl_similar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/lbl_similar"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton4"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton4"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton4" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_horizontalLine_size"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:background="@color/gray_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_lbl_ratings" />
+
+
+        <TextView
+            android:id="@+id/lbl_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/margin_2x"
+            android:text="@string/main_lbl_description"
+            android:textSize="@dimen/main_description_textSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
