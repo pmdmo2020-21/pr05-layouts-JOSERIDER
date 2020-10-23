@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/main_headerImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/main_headerImg_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
+
+    <TextView
+        android:id="@+id/main_lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_headerImg"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:text="@string/main_lbl_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/main_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_headerImg"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_2x"
+        android:contentDescription="@string/main_bookmark_description"
+        android:src="@drawable/ic_bookmark" />
+
+
+    <TextView
+        android:id="@+id/main_lbl_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_lbl_title"
+        android:layout_alignStart="@+id/main_lbl_title"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/main_lbl_date" />
+
+    <Button
+        android:id="@+id/main_btn_rent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_lbl_date"
+        android:layout_alignStart="@+id/main_lbl_date"
+        android:layout_alignEnd="@id/guieView1"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin"
+        android:text="@string/main_btn_rent" />
+
+    <Button
+        android:id="@+id/main_btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/main_btn_rent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_toEndOf="@+id/guieView1"
+        android:text="@string/main_btn_buy" />
+
+
+    <!-- Esta vista se usa para tener una referencia al centro del contenedor. y así poder repartir
+    el espacio de los botones equitativamente -->
+    <View
+        android:id="@+id/guieView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_below="@id/main_btn_rent"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_horizontalLine_size"
+        android:layout_below="@+id/main_btn_buy"
+        android:layout_margin="@dimen/margin_2x"
+        android:background="@color/gray_divider" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_alignStart="@id/view1"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+
+        android:src="@drawable/ic_baseline_edit_24"
+
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/main_lbl_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_ratings"
+        android:layout_alignStart="@+id/btn_ratings"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/lbl_ratings"
+        android:textAlignment="center" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_family"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_ratings"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_toStartOf="@+id/guieView1"
+        android:src="@drawable/ic_family"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/main_lbl_family"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_family"
+        android:layout_alignStart="@+id/btn_family"
+        android:layout_alignEnd="@+id/btn_family"
+        android:layout_marginTop="8dp"
+        android:text="@string/lbl_family"
+        android:textAlignment="center" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_family"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+
+        android:layout_toEndOf="@+id/guieView1"
+        android:src="@drawable/tomato"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/main_lbl_tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_tomato"
+        android:layout_alignStart="@+id/btn_tomato"
+        android:layout_alignEnd="@+id/btn_tomato"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/lbl_tomato"
+        android:textAlignment="center" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_similar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_tomato"
+        android:layout_alignEnd="@+id/view1"
+        android:layout_alignBottom="@+id/btn_tomato"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:src="@drawable/ic_similar"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/main_lbl_similar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_similar"
+        android:layout_alignStart="@+id/btn_similar"
+        android:layout_alignEnd="@+id/btn_similar"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/lbl_similar"
+        android:textAlignment="center" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_horizontalLine_size"
+        android:layout_below="@id/main_lbl_ratings"
+        android:layout_alignStart="@+id/view1"
+        android:layout_alignEnd="@+id/view1"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:background="@color/gray_divider" />
+
+
+    <TextView
+        android:id="@+id/lbl_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view2"
+        android:layout_alignStart="@+id/view2"
+        android:layout_alignEnd="@+id/view2"
+        android:layout_marginVertical="@dimen/margin_2x"
+        android:text="@string/main_lbl_description"
+        android:textSize="@dimen/main_description_textSize" />
+</RelativeLayout>
