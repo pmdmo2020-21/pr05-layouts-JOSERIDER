@@ -68,18 +68,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_2x"
                 android:layout_weight="1"
-                android:text="@string/main_btn_rent" />
+                android:text="@string/main_btn_rent"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/main_btn_buy"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/main_btn_buy" />
+                android:text="@string/main_btn_buy"
+                tools:ignore="ButtonStyle" />
 
         </LinearLayout>
 
         <View
+            android:id="@+id/view1"
+            android:layout_marginTop="@dimen/margin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/main_horizontalLine_size"
             android:background="@color/gray_divider" />
@@ -90,14 +94,12 @@
             android:layout_height="wrap_content"
             android:baselineAligned="false"
             android:orientation="horizontal"
-            android:padding="@dimen/margin_2x">
-
+            android:paddingVertical="@dimen/margin_2x">
 
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -124,7 +126,6 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -151,15 +152,14 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_tomato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/btn_tomato"
 
                     android:src="@drawable/tomato"
                     app:tint="@color/white"
@@ -178,16 +178,15 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/margin"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_similar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/ic_similar"
-                    android:id="@+id/btn_similar"
                     app:tint="@color/white"
                     tools:ignore="ContentDescription" />
 
@@ -204,19 +203,19 @@
         </LinearLayout>
 
         <View
+            android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/main_horizontalLine_size"
             android:background="@color/gray_divider" />
 
 
         <TextView
-            android:layout_marginVertical="@dimen/margin_2x"
             android:id="@+id/lbl_description"
-            android:textSize="@dimen/main_description_textSize"
-            android:text="@string/main_lbl_description"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:text="@string/main_lbl_description"
+            android:textSize="@dimen/main_description_textSize" />
 
 
     </LinearLayout>
